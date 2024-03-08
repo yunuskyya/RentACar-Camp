@@ -1,14 +1,20 @@
 package kodlama.io.rentACar.entities.concretes;
 
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import jakarta.persistence.*;
+import lombok.*;
 
 @Table(name="brands")
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
+@NoArgsConstructor
+@Entity
 public class Brand {
-    private int id;
+    @Id
+    @Column(name="id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(name="name")
     private String name;
 
 }

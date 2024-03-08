@@ -1,10 +1,7 @@
 package kodlama.io.rentACar.dataAccess.abstracts;
 
 import kodlama.io.rentACar.entities.concretes.Brand;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
-
-public interface BrandRepository {
-    List<Brand> getAll();
+public interface BrandRepository extends JpaRepository <Brand,Integer>{
 }
