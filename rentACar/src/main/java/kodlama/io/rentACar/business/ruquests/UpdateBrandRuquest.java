@@ -1,4 +1,5 @@
-package kodlama.io.rentACar.business.responses;
+package kodlama.io.rentACar.business.ruquests;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -6,7 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class GetAllBrandResponse {
+public class UpdateBrandRuquest {
     private int id;
     private String name;
+
 }
