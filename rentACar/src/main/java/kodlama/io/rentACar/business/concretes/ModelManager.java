@@ -6,10 +6,13 @@ import kodlama.io.rentACar.business.ruquests.CreateModelRequest;
 import kodlama.io.rentACar.core.ModelMapperService;
 import kodlama.io.rentACar.dataAccess.abstracts.ModelRepository;
 import kodlama.io.rentACar.entities.concretes.Model;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
+@Service
+@AllArgsConstructor
 public class ModelManager implements ModelService {
     private ModelRepository modelRepository;
     private ModelMapperService modelMapperService;
