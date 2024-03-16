@@ -12,7 +12,8 @@
 - Controllers
 - How to Run
 - Dependencies
-- Contributing
+
+
 # Brand Service
 **The BrandService interface defines operations for brands, including retrieving all, getting by ID, adding, updating, and deleting brands.**
 
