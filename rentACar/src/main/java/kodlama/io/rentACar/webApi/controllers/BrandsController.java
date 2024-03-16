@@ -3,8 +3,8 @@ package kodlama.io.rentACar.webApi.controllers;
 import kodlama.io.rentACar.business.abstracts.BrandService;
 import kodlama.io.rentACar.business.responses.GetAllBrandResponse;
 import kodlama.io.rentACar.business.responses.GetByIdBrandResponse;
-import kodlama.io.rentACar.business.ruquests.CreateBrandRuquest;
-import kodlama.io.rentACar.business.ruquests.UpdateBrandRuquest;
+import kodlama.io.rentACar.business.requests.CreateBrandRequest;
+import kodlama.io.rentACar.business.requests.UpdateBrandRuquest;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -24,8 +24,8 @@ public class BrandsController {
     }
     @PostMapping()
     @ResponseStatus(HttpStatus.CREATED)
-    public void add(@RequestBody() CreateBrandRuquest createBrandRuquest){
-        this.brandService.add(createBrandRuquest);
+    public void add(@RequestBody() CreateBrandRequest createBrandRequest){
+        this.brandService.add(createBrandRequest);
 
     }
     @GetMapping("{id}")

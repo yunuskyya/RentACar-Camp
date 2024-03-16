@@ -4,8 +4,8 @@ import kodlama.io.rentACar.business.abstracts.BrandService;
 import kodlama.io.rentACar.business.responses.GetAllBrandResponse;
 import kodlama.io.rentACar.business.responses.GetByIdBrandResponse;
 import kodlama.io.rentACar.business.rules.BrandBusinessRules;
-import kodlama.io.rentACar.business.ruquests.CreateBrandRuquest;
-import kodlama.io.rentACar.business.ruquests.UpdateBrandRuquest;
+import kodlama.io.rentACar.business.requests.CreateBrandRequest;
+import kodlama.io.rentACar.business.requests.UpdateBrandRuquest;
 import kodlama.io.rentACar.core.ModelMapperService;
 import kodlama.io.rentACar.dataAccess.abstracts.BrandRepository;
 import kodlama.io.rentACar.entities.concretes.Brand;
@@ -38,10 +38,10 @@ public class BrandManager implements BrandService {
     }
 
     @Override
-    public void add(CreateBrandRuquest createBrandRuquest) {
-        this.brandBusinessRules.checkIfBrandNameExists(createBrandRuquest.getName());
+    public void add(CreateBrandRequest createBrandRequest) {
+        this.brandBusinessRules.checkIfBrandNameExists(createBrandRequest.getName());
         Brand brand = this.modelMapperService.forRuquest()
-                .map(createBrandRuquest,Brand.class );
+                .map(createBrandRequest,Brand.class );
 
         this.brandRepository.save(brand);
     }

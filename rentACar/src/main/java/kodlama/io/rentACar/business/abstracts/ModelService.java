@@ -1,7 +1,7 @@
 package kodlama.io.rentACar.business.abstracts;
 
 import kodlama.io.rentACar.business.responses.GetAllModelResponse;
-import kodlama.io.rentACar.business.ruquests.CreateModelRequest;
+import kodlama.io.rentACar.business.requests.CreateModelRequest;
 
 import java.util.List;
 

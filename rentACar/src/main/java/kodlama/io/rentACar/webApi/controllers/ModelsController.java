@@ -2,8 +2,7 @@ package kodlama.io.rentACar.webApi.controllers;
 
 import kodlama.io.rentACar.business.abstracts.ModelService;
 import kodlama.io.rentACar.business.responses.GetAllModelResponse;
-import kodlama.io.rentACar.business.ruquests.CreateBrandRuquest;
-import kodlama.io.rentACar.business.ruquests.CreateModelRequest;
+import kodlama.io.rentACar.business.requests.CreateModelRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("api/models")
 @AllArgsConstructor
-public class ModelController {
+public class ModelsController {
      public ModelService modelService;
 
      @GetMapping()

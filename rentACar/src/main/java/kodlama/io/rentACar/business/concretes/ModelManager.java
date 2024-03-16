@@ -2,7 +2,7 @@ package kodlama.io.rentACar.business.concretes;
 
 import kodlama.io.rentACar.business.abstracts.ModelService;
 import kodlama.io.rentACar.business.responses.GetAllModelResponse;
-import kodlama.io.rentACar.business.ruquests.CreateModelRequest;
+import kodlama.io.rentACar.business.requests.CreateModelRequest;
 import kodlama.io.rentACar.core.ModelMapperService;
 import kodlama.io.rentACar.dataAccess.abstracts.ModelRepository;
 import kodlama.io.rentACar.entities.concretes.Model;

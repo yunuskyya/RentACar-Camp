@@ -1,4 +1,4 @@
-package kodlama.io.rentACar.business.ruquests;
+package kodlama.io.rentACar.business.requests;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateBrandRuquest {
+public class CreateBrandRequest {
     @NotBlank
     @Size(min = 3,max = 20)
     private String name;
