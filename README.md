@@ -1,61 +1,49 @@
-RentACar Application
-Overview
-This Java Spring Boot application manages a car rental system, providing RESTful APIs for CRUD operations on brands, models, and customers. It uses Spring Data JPA for data persistence and Jakarta Bean Validation for validation. The application includes exception handling for business-specific errors.
+## RentACar Application
+# Overview
+**This Java Spring Boot application manages a car rental system, providing RESTful APIs for CRUD operations on brands, models, and customers. It uses Spring Data JPA for data persistence and Jakarta Bean Validation for validation. The application includes exception handling for business-specific errors.**
 
-Table of Contents
-Brand Service
-Customer Service
-Model Service
-Brand Manager
-Customer Manager
-Model Manager
-Request and Response Classes
-Exception Handling
-Controllers
-How to Run
-Dependencies
-Contributing
-Brand Service
-The BrandService interface defines operations for brands, including retrieving all, getting by ID, adding, updating, and deleting brands.
+# Table of Contents
+- Brand Service
+- Model Service
+- Brand Manager
+- Model Manager
+- Request and Response Classes
+- Exception Handling
+- Controllers
+- How to Run
+- Dependencies
+- Contributing
+# Brand Service
+**The BrandService interface defines operations for brands, including retrieving all, getting by ID, adding, updating, and deleting brands.**
 
-Customer Service
-The CustomerService interface defines operations for customers, including retrieving all and adding new customers.
+# Model Service
+**The ModelService interface defines operations for models, including retrieving all and adding new models.**
 
-Model Service
-The ModelService interface defines operations for models, including retrieving all and adding new models.
+# Brand Manager
+**The BrandManager class implements BrandService, providing logic for brand operations. Brand-specific rules are in BrandBusinessRules**.
 
-Brand Manager
-The BrandManager class implements BrandService, providing logic for brand operations. Brand-specific rules are in BrandBusinessRules.
+# Model Manager
+**The ModelManager class implements ModelService, providing logic for model operations.**
 
-Customer Manager
-The CustomerManager class implements CustomerService, providing logic for customer operations. Customer-specific rules are in CustomerBusinessRules.
+# Request and Response Classes
+**Various classes define data structures for communication between client and server.**
 
-Model Manager
-The ModelManager class implements ModelService, providing logic for model operations.
+# Exception Handling
+**The GlobalExceptionHandler class handles business exceptions and validation errors, returning detailed responses.**
 
-Request and Response Classes
-Various classes define data structures for communication between client and server.
+# Controllers
+# Brands Controller
+**Handles HTTP requests related to brands: retrieving all, getting by ID, adding, updating, and deleting.**
 
-Exception Handling
-The GlobalExceptionHandler class handles business exceptions and validation errors, returning detailed responses.
+# Models Controller
+**Handles HTTP requests related to models: retrieving all and adding new models.**
 
-Controllers
-Brands Controller
-Handles HTTP requests related to brands: retrieving all, getting by ID, adding, updating, and deleting.
+# How to Run
+**Run the application using the main method in RentACarApplication. Ensure dependencies and a compatible Java runtime are installed.**
 
-Customers Controller
-Handles HTTP requests related to customers: retrieving all and adding new customers.
+# Dependencies
+- Spring Boot
+- Spring Data JPA
+- Jakarta Bean Validation
+- ModelMapper
 
-Models Controller
-Handles HTTP requests related to models: retrieving all and adding new models.
-
-How to Run
-Run the application using the main method in RentACarApplication. Ensure dependencies and a compatible Java runtime are installed.
-
-Dependencies
-Spring Boot
-Spring Data JPA
-Jakarta Bean Validation
-ModelMapper
-Contributing
-Feel free to contribute by submitting issues or pull requests. Your feedback and contributions are highly appreciated!
