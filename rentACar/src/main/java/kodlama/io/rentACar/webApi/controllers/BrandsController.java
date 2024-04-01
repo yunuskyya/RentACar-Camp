@@ -4,7 +4,7 @@ import kodlama.io.rentACar.business.abstracts.BrandService;
 import kodlama.io.rentACar.business.responses.GetAllBrandResponse;
 import kodlama.io.rentACar.business.responses.GetByIdBrandResponse;
 import kodlama.io.rentACar.business.requests.CreateBrandRequest;
-import kodlama.io.rentACar.business.requests.UpdateBrandRuquest;
+import kodlama.io.rentACar.business.requests.UpdateBrandRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -33,8 +33,8 @@ public class BrandsController {
         return brandService.getById(id);
     }
     @PutMapping
-    public void update(@RequestBody() UpdateBrandRuquest updateBrandRuquest){
-        this.brandService.update(updateBrandRuquest);
+    public void update(@RequestBody() UpdateBrandRequest updateBrandRequest){
+        this.brandService.update(updateBrandRequest);
     }
     @DeleteMapping("{id}")
     public void delete(@PathVariable int id){
